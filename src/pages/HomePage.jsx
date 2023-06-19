@@ -12,7 +12,7 @@ function HomePage() {
   }, [dispatch]);
 
   return (
-    <div className="container my-5">
+    <div className="container my-3">
       <div
         className="row g-0 mt-2 mb-2 text-center p-4"
         style={{
