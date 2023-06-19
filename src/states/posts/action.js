@@ -11,7 +11,9 @@ const asyncReceivePost = () => async (dispatch) => {
       type: ActionTypes.RECEIVE_POSTS,
       payload: posts.data,
     });
-  } catch (error) {}
+  } catch (error) {
+    alert(error.message);
+  }
 };
 
 export { ActionTypes, asyncReceivePost };
