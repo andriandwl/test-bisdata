@@ -12,21 +12,34 @@ function HomePage() {
   }, [dispatch]);
 
   return (
-    <div className="container align-content-center my-5">
+    <div className="container my-5">
+      <div
+        className="row g-0 mt-2 mb-2 text-center p-4"
+        style={{
+          borderRadius: "30px 30px 0px 0px",
+          backgroundColor: "#7FE9DE",
+        }}
+      >
+        <div className="col-lg-12">
+          <h1 className="bodoni" style={{ color: "#3D5656", fontSize: "48px" }}>
+            Posts
+          </h1>
+        </div>
+      </div>
       {posts.map((post) => {
         return (
-          <div className="col-lg-8 card-group mb-5" key={post.id}>
+          <div className="col-lg-12 card-group mb-5" key={post.id}>
             <div className="card profile-card-5">
               <div className="card-img-block">
                 <div className="row g-0 card-img-top">
                   <div className="col-lg-12 text-center"></div>
 
-                  <div className="col-lg-12 text-center">
+                  <div className="col-lg-12 text-center p-2">
                     <h2>{post.title}</h2>
                   </div>
 
                   <div className="col-lg-12">
-                    <div className="card-text text-center">{post.body}</div>
+                    <div className="card-text text-center p-2">{post.body}</div>
                   </div>
                 </div>
               </div>
@@ -43,11 +56,8 @@ function HomePage() {
                         }}
                       >
                         <p style={{ marginTop: "10px" }}>
-                          User Id :{post.userId}
+                          User Id : {post.userId}
                         </p>
-                      </div>
-                      <div className="col-lg-3 ms-2">
-                        <p style={{ marginTop: "10px" }}>{}</p>
                       </div>
                     </div>
                   </div>
